@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 2275126193930267175}
   - component: {fileID: 2275126193930267172}
   - component: {fileID: 2275126193930267169}
-  - component: {fileID: 1277252249}
-  m_Layer: 0
+  - component: {fileID: 4527811524309243485}
+  m_Layer: 6
   m_Name: Asteroid
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -73,7 +73,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initialSpeed: 8
   initialRotationSpeed: 6
---- !u!135 &1277252249
+  childAsteroidPrefab: {fileID: 9115111000647724103, guid: d15f11f9e48c4da4085ad4b70ac0f2f2, type: 3}
+--- !u!135 &4527811524309243485
 SphereCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,9 +94,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2275126193930267168}
     m_Modifications:
+    - target: {fileID: 112364, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 130102, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
       propertyPath: m_Name
       value: Asteroid 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 130102, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 153142, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 162164, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 164382, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 469044, guid: 04d0bf4be9447154188d86f6e3b8dce9, type: 3}
       propertyPath: m_RootOrder

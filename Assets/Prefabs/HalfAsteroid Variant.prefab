@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7056505173022770796
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.2241714
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.90999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.588166
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267168, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2275126193930267169, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: childAsteroidPrefab
+      value: 
+      objectReference: {fileID: 8720938060001802457, guid: bfb6758cdbc775a47842c90683972dfa, type: 3}
+    - target: {fileID: 2275126193930267179, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
+      propertyPath: m_Name
+      value: HalfAsteroid Variant
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 81b477ec952a8dd4c828dc499421a92d, type: 3}
