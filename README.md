@@ -15,11 +15,9 @@ To work properly, the project required these package in their default location
 
 ## Steps
 ### 0 - Context
-scene / inspector
-component architecture
-prefabs
-asset store
-c#
+- scene / inspector
+- component architecture
+- c#
 
 ### 1 - Spaceship model
 - Cube spaceship
