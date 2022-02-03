@@ -9,6 +9,7 @@ public class Asteroid : MonoBehaviour
     public float initialRotationSpeed = 6;
     public GameObject childAsteroidPrefab;
     public string missileTag = "Missile";
+    AsteroidField asteroidField;
 
     private void Awake()
     {
@@ -23,6 +24,9 @@ public class Asteroid : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         rb.velocity = Random.insideUnitSphere * Random.Range(initialSpeed/2f, initialSpeed);
         rb.angularVelocity = Random.insideUnitSphere * Random.Range(initialRotationSpeed/2f, initialRotationSpeed);
+
+        asteroidField = GetComponentInParent<AsteroidField>();
+        if (asteroidField) asteroidField.asteroids.Add(gameObject);
     }
 
     public void DisableCollision()
@@ -35,6 +39,10 @@ public class Asteroid : MonoBehaviour
         foreach (var collider in GetComponentsInChildren<Collider>()) collider.enabled = true;
     }
 
+    private void OnDestroy()
+    {
+        if (asteroidField) asteroidField.asteroids.Remove(gameObject);
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -51,6 +59,11 @@ public class Asteroid : MonoBehaviour
             Vector3 offsetDirection = Vector3.Cross(rb.velocity, Vector3.up);
             var c1 = GameObject.Instantiate(childAsteroidPrefab, transform.position + offsetDirection, transform.rotation);
             var c2 = GameObject.Instantiate(childAsteroidPrefab, transform.position - offsetDirection, transform.rotation);
+            if (asteroidField)
+            {
+                c1.transform.parent = asteroidField.transform;
+                c2.transform.parent = asteroidField.transform;
+            }
         }
     }
 }

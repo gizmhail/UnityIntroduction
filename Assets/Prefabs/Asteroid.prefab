@@ -74,6 +74,7 @@ MonoBehaviour:
   initialSpeed: 8
   initialRotationSpeed: 6
   childAsteroidPrefab: {fileID: 9115111000647724103, guid: d15f11f9e48c4da4085ad4b70ac0f2f2, type: 3}
+  missileTag: Missile
 --- !u!135 &4527811524309243485
 SphereCollider:
   m_ObjectHideFlags: 0
