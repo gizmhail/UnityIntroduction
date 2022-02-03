@@ -7,17 +7,34 @@ public class SpaceshipController : MonoBehaviour
     public float speedFactor = 10f;
     public float rotationSpeedFactor = 180f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        float forwardInput = Input.GetAxis("Vertical");
-        float speed = speedFactor * forwardInput;
-        float move = speed * Time.deltaTime;
-        transform.position += move * transform.forward;
+    private Rigidbody rb;
 
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void Update()
+    {
         float rotationInput = Input.GetAxis("Horizontal");
         float rotationSpeed = rotationSpeedFactor * rotationInput;
         float rotation = rotationSpeed * Time.deltaTime;
         transform.Rotate(rotation * transform.up);
+    }
+
+    private void FixedUpdate()
+    {
+        float forwardInput = Input.GetAxis("Vertical");
+        float speed = speedFactor * forwardInput;
+        float move = speed;
+        rb.AddForce(move * transform.forward);
+
+        /*
+        // Not recommended: less pleasant control for the game expected here
+        float rotationInput = Input.GetAxis("Horizontal");
+        float rotationSpeed = rotationSpeedFactor * rotationInput;
+        float rotation = rotationSpeed;
+        rb.AddTorque(rotation * transform.up);
+        */
     }
 }
