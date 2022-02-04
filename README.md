@@ -1,4 +1,5 @@
 # Unity discovering dojo
+![img/7-Visuals.png](img/7-Visuals.png)
 
 ## Assets required
 To work properly, the project required these package in their default location 
