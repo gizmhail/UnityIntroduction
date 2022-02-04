@@ -46,6 +46,8 @@ To work properly, the project required these package in their default location
 - Velocity
 - Random / randomInsideUnitSphere
 
+![img/4-Prefab.png](img/4-Prefab.png)
+
 ### 5-AssetStore
 - Spaceship model & asteroid model
 - scale/adaptation/fix
@@ -58,12 +60,14 @@ To work properly, the project required these package in their default location
 - Tag to determine object kind in collision efficiently
 - (Optional) Layer to filter collisions
 - (Optional) Delayed Invoke
+![img/7-Visuals.png](img/7-Visuals.png)
 
 ### 7-Visuals
 - Lighting and skybox
 - Camera follow (offset)
 - Particle system for space dust
 - Asteroid field for spawn : list, distance, …
+![img/6-ObjectSpawning.png](img/6-ObjectSpawning.png)
 
 ## Memos
 - Git ignore https://github.com/github/gitignore/blob/main/Unity.gitignore 
