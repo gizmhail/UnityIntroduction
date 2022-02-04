@@ -46,17 +46,21 @@ public class Asteroid : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        Destroy(gameObject);
         GameObject other = collision?.rigidbody?.gameObject;
         if (other && other.tag == missileTag)
         {
             // We disable the projectile collider to avoid it destroying several objects (the Destroy call is not immediate)
-            foreach (var collider in collision.rigidbody.gameObject.GetComponentsInChildren<Collider>()) collider.enabled = false;
+            foreach (var collider in other.GetComponentsInChildren<Collider>()) collider.enabled = false;
             Destroy(collision.rigidbody.gameObject);
+
         }
         if (childAsteroidPrefab != null)
         {
-            Vector3 offsetDirection = Vector3.Cross(rb.velocity, Vector3.up);
+            Vector3 offsetDirection = Vector3.left;
+            if (collision?.rigidbody != null)
+            {
+                offsetDirection = Vector3.Cross(collision.rigidbody.velocity, Vector3.up).normalized;
+            }
             var c1 = GameObject.Instantiate(childAsteroidPrefab, transform.position + offsetDirection, transform.rotation);
             var c2 = GameObject.Instantiate(childAsteroidPrefab, transform.position - offsetDirection, transform.rotation);
             if (asteroidField)
@@ -65,5 +69,6 @@ public class Asteroid : MonoBehaviour
                 c2.transform.parent = asteroidField.transform;
             }
         }
+        Destroy(gameObject);
     }
 }

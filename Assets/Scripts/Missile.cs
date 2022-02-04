@@ -8,8 +8,7 @@ public class Missile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GetComponent<Rigidbody>().velocity = speed* transform.forward;
+        GetComponent<Rigidbody>().velocity = speed * transform.forward;
         Destroy(this.gameObject, 2);
     }
-
 }
